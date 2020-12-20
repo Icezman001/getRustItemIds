@@ -26,7 +26,7 @@ async function downloadHTML(){
     }
 
     var jsonData = JSON.stringify(allItems, null, "\t");
-    fs.writeFileSync("itemsJson.json", jsonData)
+    fs.writeFileSync("itemsJsonDec2020.json", jsonData)
     //For now I just manually take the entire json string and copy it into the items.js file so const itemIDList = { HERE GOES ALL THE JSON DATA } 
 }
 
