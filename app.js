@@ -23,7 +23,16 @@ async function downloadHTML(){
         //     [shortName] : itemIdNumber
         // }
         allItems[shortName] = itemIdNumber
+        let caseLine = "case " + itemIdNumber + ": return " + "\"" + shortName + "\"" + ";" + "\n"
+        fs.appendFile('itemIDS.txt', caseLine, function (err) {
+            if (err) {
+              // append failed
+            } else {
+              // done
+            }
+          })
     }
+
 
     var jsonData = JSON.stringify(allItems, null, "\t");
     fs.writeFileSync("itemsJsonDec2020.json", jsonData)
